@@ -23,35 +23,108 @@ Partial Class formPpal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnConnect = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblId = New System.Windows.Forms.Label()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.lblNombre = New System.Windows.Forms.Label()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
+        Me.lblApellido = New System.Windows.Forms.Label()
+        Me.txtMail = New System.Windows.Forms.TextBox()
+        Me.lblMail = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnConnect
         '
         Me.btnConnect.BackColor = System.Drawing.Color.White
-        Me.btnConnect.Location = New System.Drawing.Point(112, 86)
+        Me.btnConnect.Location = New System.Drawing.Point(106, 251)
         Me.btnConnect.Name = "btnConnect"
         Me.btnConnect.Size = New System.Drawing.Size(135, 48)
         Me.btnConnect.TabIndex = 0
-        Me.btnConnect.Text = "Connect"
+        Me.btnConnect.Text = "Insertar"
         Me.btnConnect.UseVisualStyleBackColor = False
         '
-        'Label1
+        'lblId
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(128, 47)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Comprobar Conexion"
+        Me.lblId.AutoSize = True
+        Me.lblId.Location = New System.Drawing.Point(45, 32)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(16, 13)
+        Me.lblId.TabIndex = 2
+        Me.lblId.Text = "Id"
+        '
+        'txtId
+        '
+        Me.txtId.Location = New System.Drawing.Point(106, 29)
+        Me.txtId.Multiline = True
+        Me.txtId.Name = "txtId"
+        Me.txtId.Size = New System.Drawing.Size(135, 27)
+        Me.txtId.TabIndex = 3
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(106, 77)
+        Me.txtNombre.Multiline = True
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(135, 27)
+        Me.txtNombre.TabIndex = 5
+        '
+        'lblNombre
+        '
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Location = New System.Drawing.Point(45, 77)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(44, 13)
+        Me.lblNombre.TabIndex = 4
+        Me.lblNombre.Text = "Nombre"
+        '
+        'txtApellido
+        '
+        Me.txtApellido.Location = New System.Drawing.Point(106, 126)
+        Me.txtApellido.Multiline = True
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(135, 27)
+        Me.txtApellido.TabIndex = 7
+        '
+        'lblApellido
+        '
+        Me.lblApellido.AutoSize = True
+        Me.lblApellido.Location = New System.Drawing.Point(45, 129)
+        Me.lblApellido.Name = "lblApellido"
+        Me.lblApellido.Size = New System.Drawing.Size(44, 13)
+        Me.lblApellido.TabIndex = 6
+        Me.lblApellido.Text = "Apellido"
+        '
+        'txtMail
+        '
+        Me.txtMail.Location = New System.Drawing.Point(106, 175)
+        Me.txtMail.Multiline = True
+        Me.txtMail.Name = "txtMail"
+        Me.txtMail.Size = New System.Drawing.Size(135, 27)
+        Me.txtMail.TabIndex = 9
+        '
+        'lblMail
+        '
+        Me.lblMail.AutoSize = True
+        Me.lblMail.Location = New System.Drawing.Point(45, 178)
+        Me.lblMail.Name = "lblMail"
+        Me.lblMail.Size = New System.Drawing.Size(26, 13)
+        Me.lblMail.TabIndex = 8
+        Me.lblMail.Text = "Mail"
         '
         'formPpal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(375, 196)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(323, 417)
+        Me.Controls.Add(Me.txtMail)
+        Me.Controls.Add(Me.lblMail)
+        Me.Controls.Add(Me.txtApellido)
+        Me.Controls.Add(Me.lblApellido)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.lblNombre)
+        Me.Controls.Add(Me.txtId)
+        Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.btnConnect)
         Me.Name = "formPpal"
         Me.Text = "Form1"
@@ -61,5 +134,12 @@ Partial Class formPpal
     End Sub
 
     Friend WithEvents btnConnect As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblId As Label
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents lblNombre As Label
+    Friend WithEvents txtApellido As TextBox
+    Friend WithEvents lblApellido As Label
+    Friend WithEvents txtMail As TextBox
+    Friend WithEvents lblMail As Label
 End Class

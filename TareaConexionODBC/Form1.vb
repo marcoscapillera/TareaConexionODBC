@@ -6,7 +6,7 @@ Public Class formPpal
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -14,11 +14,12 @@ Public Class formPpal
         Dim conexion As New OdbcConnection("DRIVER=MySQL ODBC 5.3 ANSI Driver;UID=marcos;PWD=admin;PORT=3306;DATABASE=testconexion;SERVER=localhost")
 
         conexion.Open()
-        MsgBox("Conexion Exitosa!")
+
 
 
         Dim comando As New OdbcCommand
-        comando.CommandText = "INSERT INTO persona (id, nombre, apellido) VALUES (1,'Juan','Perez')"
+        comando.CommandText = "INSERT INTO persona (id, nombre, apellido) VALUES (" + txtId.Text + ",'" + txtNombre.Text + "',' " + txtApellido.Text + "')"
+        MsgBox(comando.CommandText)
         comando.Connection = conexion
 
         comando.ExecuteNonQuery()
