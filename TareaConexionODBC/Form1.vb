@@ -61,7 +61,7 @@ Public Class formPpal
         Dim conexion As New OdbcConnection(stringDeConexion)
         conexion.Open()
         Dim comando As New OdbcCommand
-        comando.CommandText = "SELECT FROM * persona"
+        comando.CommandText = "SELECT * FROM  persona"
         MsgBox(comando.CommandText)
         comando.Connection = conexion
         lector = comando.ExecuteReader()
@@ -71,10 +71,11 @@ Public Class formPpal
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         lector.Read()
-        txtId.Text = lector(1)
-        txtNombre.Text = lector(1)
-        txtApellido.Text = lector(1)
-        txtMail.Text = lector(1)
+
+        txtId.Text = lector(0).ToString()
+        txtNombre.Text = lector(1).ToString()
+        txtApellido.Text = lector(2).ToString()
+        txtMail.Text = lector(3).ToString()
     End Sub
 End Class
 
