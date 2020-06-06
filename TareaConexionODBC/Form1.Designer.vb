@@ -22,7 +22,7 @@ Partial Class formPpal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnConnect = New System.Windows.Forms.Button()
+        Me.btnInsert = New System.Windows.Forms.Button()
         Me.lblId = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -31,17 +31,19 @@ Partial Class formPpal
         Me.lblApellido = New System.Windows.Forms.Label()
         Me.txtMail = New System.Windows.Forms.TextBox()
         Me.lblMail = New System.Windows.Forms.Label()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnConnect
+        'btnInsert
         '
-        Me.btnConnect.BackColor = System.Drawing.Color.White
-        Me.btnConnect.Location = New System.Drawing.Point(106, 251)
-        Me.btnConnect.Name = "btnConnect"
-        Me.btnConnect.Size = New System.Drawing.Size(135, 48)
-        Me.btnConnect.TabIndex = 0
-        Me.btnConnect.Text = "Insertar"
-        Me.btnConnect.UseVisualStyleBackColor = False
+        Me.btnInsert.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnInsert.Location = New System.Drawing.Point(106, 222)
+        Me.btnInsert.Name = "btnInsert"
+        Me.btnInsert.Size = New System.Drawing.Size(135, 33)
+        Me.btnInsert.TabIndex = 0
+        Me.btnInsert.Text = "Insertar"
+        Me.btnInsert.UseVisualStyleBackColor = False
         '
         'lblId
         '
@@ -111,12 +113,34 @@ Partial Class formPpal
         Me.lblMail.TabIndex = 8
         Me.lblMail.Text = "Mail"
         '
+        'btnModificar
+        '
+        Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnModificar.Location = New System.Drawing.Point(106, 270)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(135, 33)
+        Me.btnModificar.TabIndex = 10
+        Me.btnModificar.Text = "Update"
+        Me.btnModificar.UseVisualStyleBackColor = False
+        '
+        'btnDelete
+        '
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnDelete.Location = New System.Drawing.Point(106, 320)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(135, 33)
+        Me.btnDelete.TabIndex = 11
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
+        '
         'formPpal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(323, 417)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.txtMail)
         Me.Controls.Add(Me.lblMail)
         Me.Controls.Add(Me.txtApellido)
@@ -125,7 +149,7 @@ Partial Class formPpal
         Me.Controls.Add(Me.lblNombre)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.lblId)
-        Me.Controls.Add(Me.btnConnect)
+        Me.Controls.Add(Me.btnInsert)
         Me.Name = "formPpal"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -133,7 +157,7 @@ Partial Class formPpal
 
     End Sub
 
-    Friend WithEvents btnConnect As Button
+    Friend WithEvents btnInsert As Button
     Friend WithEvents lblId As Label
     Friend WithEvents txtId As TextBox
     Friend WithEvents txtNombre As TextBox
@@ -142,4 +166,6 @@ Partial Class formPpal
     Friend WithEvents lblApellido As Label
     Friend WithEvents txtMail As TextBox
     Friend WithEvents lblMail As Label
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnDelete As Button
 End Class

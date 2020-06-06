@@ -10,7 +10,7 @@ Public Class formPpal
 
     End Sub
 
-    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
+    Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
         Dim conexion As New OdbcConnection("DRIVER=MySQL ODBC 5.3 ANSI Driver;UID=marcos;PWD=admin;PORT=3306;DATABASE=testconexion;SERVER=localhost")
 
         conexion.Open()
@@ -18,14 +18,67 @@ Public Class formPpal
 
 
         Dim comando As New OdbcCommand
-        comando.CommandText = "INSERT INTO persona (id, nombre, apellido) VALUES (" + txtId.Text + ",'" + txtNombre.Text + "',' " + txtApellido.Text + "')"
-        MsgBox(comando.CommandText)
-        comando.Connection = conexion
+        If txtMail.Text = "" Then
+            comando.CommandText = "INSERT INTO persona (id, nombre, apellido) VALUES (" + txtId.Text + ",'" + txtNombre.Text + "',' " + txtApellido.Text + "')"
+            MsgBox(comando.CommandText)
+            comando.Connection = conexion
+        Else
+            comando.CommandText = "INSERT INTO persona (id, nombre, apellido,mail) VALUES (" + txtId.Text + ",'" + txtNombre.Text + "',' " + txtApellido.Text + "',' " + txtMail.Text + "')"
+            MsgBox(comando.CommandText)
+            comando.Connection = conexion
+        End If
+
 
         comando.ExecuteNonQuery()
 
         MsgBox("Persona insert correct")
 
+
+    End Sub
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+
+        Dim conexion As New OdbcConnection("DRIVER=MySQL ODBC 5.3 ANSI Driver;UID=marcos;PWD=admin;PORT=3306;DATABASE=testconexion;SERVER=localhost")
+
+        conexion.Open()
+
+
+
+        Dim comando As New OdbcCommand
+
+        comando.CommandText = "UPDATE  persona SET  nombre = '" + txtNombre.Text + "', apellido = ' " + txtApellido.Text + "', mail = ' " + txtMail.Text + "'  WHERE id = " + txtId.Text + " "
+        MsgBox(comando.CommandText)
+            comando.Connection = conexion
+
+
+
+
+        comando.ExecuteNonQuery()
+
+        MsgBox("Persona update correct")
+
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+
+        Dim conexion As New OdbcConnection("DRIVER=MySQL ODBC 5.3 ANSI Driver;UID=marcos;PWD=admin;PORT=3306;DATABASE=testconexion;SERVER=localhost")
+
+        conexion.Open()
+
+
+
+        Dim comando As New OdbcCommand
+
+        comando.CommandText = "DELETE FROM persona WHERE id= " + txtId.Text + ""
+        MsgBox(comando.CommandText)
+        comando.Connection = conexion
+
+
+
+
+        comando.ExecuteNonQuery()
+
+        MsgBox("Persona Delete correct")
 
     End Sub
 End Class
