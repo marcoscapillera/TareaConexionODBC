@@ -33,14 +33,16 @@ Partial Class formPpal
         Me.lblMail = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnListar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnInsert
         '
         Me.btnInsert.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnInsert.Location = New System.Drawing.Point(106, 222)
+        Me.btnInsert.Location = New System.Drawing.Point(48, 231)
         Me.btnInsert.Name = "btnInsert"
-        Me.btnInsert.Size = New System.Drawing.Size(135, 33)
+        Me.btnInsert.Size = New System.Drawing.Size(93, 33)
         Me.btnInsert.TabIndex = 0
         Me.btnInsert.Text = "Insertar"
         Me.btnInsert.UseVisualStyleBackColor = False
@@ -116,9 +118,9 @@ Partial Class formPpal
         'btnModificar
         '
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnModificar.Location = New System.Drawing.Point(106, 270)
+        Me.btnModificar.Location = New System.Drawing.Point(48, 270)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(135, 33)
+        Me.btnModificar.Size = New System.Drawing.Size(93, 33)
         Me.btnModificar.TabIndex = 10
         Me.btnModificar.Text = "Update"
         Me.btnModificar.UseVisualStyleBackColor = False
@@ -126,19 +128,41 @@ Partial Class formPpal
         'btnDelete
         '
         Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnDelete.Location = New System.Drawing.Point(106, 320)
+        Me.btnDelete.Location = New System.Drawing.Point(147, 231)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(135, 33)
+        Me.btnDelete.Size = New System.Drawing.Size(94, 33)
         Me.btnDelete.TabIndex = 11
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
+        '
+        'btnListar
+        '
+        Me.btnListar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnListar.Location = New System.Drawing.Point(147, 270)
+        Me.btnListar.Name = "btnListar"
+        Me.btnListar.Size = New System.Drawing.Size(94, 33)
+        Me.btnListar.TabIndex = 12
+        Me.btnListar.Text = "Buscar"
+        Me.btnListar.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Silver
+        Me.Button1.Location = New System.Drawing.Point(48, 309)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(193, 33)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "Siguiente"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'formPpal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(323, 417)
+        Me.ClientSize = New System.Drawing.Size(301, 417)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnListar)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.txtMail)
@@ -168,4 +192,6 @@ Partial Class formPpal
     Friend WithEvents lblMail As Label
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnDelete As Button
+    Friend WithEvents btnListar As Button
+    Friend WithEvents Button1 As Button
 End Class
