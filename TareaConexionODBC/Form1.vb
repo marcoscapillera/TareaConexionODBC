@@ -6,6 +6,17 @@ Public Class formPpal
     Private stringDeConexion = "DRIVER=MySQL ODBC 5.3 ANSI Driver;UID=marcos;PWD=admin;PORT=3306;DATABASE=testconexion;SERVER=localhost"
     Private lector As OdbcDataReader
 
+    Private Sub obtenerDatos()
+        Dim conexion As New OdbcConnection(stringDeConexion)
+        conexion.Open()
+        Dim comando As New OdbcCommand
+        comando.CommandText = "SELECT * FROM  persona"
+        MsgBox(comando.CommandText)
+        comando.Connection = conexion
+        Me.lector = comando.ExecuteReader()
+
+    End Sub
+
     Private Sub formPpal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -58,14 +69,7 @@ Public Class formPpal
     End Sub
 
     Private Sub btnListar_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Dim conexion As New OdbcConnection(stringDeConexion)
-        conexion.Open()
-        Dim comando As New OdbcCommand
-        comando.CommandText = "SELECT * FROM  persona"
-        MsgBox(comando.CommandText)
-        comando.Connection = conexion
-        lector = comando.ExecuteReader()
-
+        obtenerDatos()
 
     End Sub
 
@@ -79,10 +83,11 @@ Public Class formPpal
     End Sub
 
     Private Sub btnList_Click(sender As Object, e As EventArgs) Handles btnList.Click
+        obtenerDatos()
         Dim tabla As New DataTable
 
         ' Cargar resultado de query en DataTable
-        tabla.Load(lector)
+        tabla.Load(Me.lector)
 
         'Volcar la informacion de DataTable en el DataGrid
         GrillaPersona.DataSource = tabla

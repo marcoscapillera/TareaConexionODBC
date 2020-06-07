@@ -163,7 +163,7 @@ Partial Class formPpal
         Me.GrillaPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.GrillaPersona.Location = New System.Drawing.Point(273, 29)
         Me.GrillaPersona.Name = "GrillaPersona"
-        Me.GrillaPersona.Size = New System.Drawing.Size(506, 352)
+        Me.GrillaPersona.Size = New System.Drawing.Size(435, 352)
         Me.GrillaPersona.TabIndex = 14
         '
         'btnList
@@ -181,7 +181,7 @@ Partial Class formPpal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(828, 437)
+        Me.ClientSize = New System.Drawing.Size(726, 401)
         Me.Controls.Add(Me.btnList)
         Me.Controls.Add(Me.GrillaPersona)
         Me.Controls.Add(Me.btnNext)
