@@ -33,8 +33,11 @@ Partial Class formPpal
         Me.lblMail = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnListar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.GrillaPersona = New System.Windows.Forms.DataGridView()
+        Me.btnList = New System.Windows.Forms.Button()
+        CType(Me.GrillaPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnInsert
@@ -44,7 +47,7 @@ Partial Class formPpal
         Me.btnInsert.Name = "btnInsert"
         Me.btnInsert.Size = New System.Drawing.Size(93, 33)
         Me.btnInsert.TabIndex = 0
-        Me.btnInsert.Text = "Insertar"
+        Me.btnInsert.Text = "Insert"
         Me.btnInsert.UseVisualStyleBackColor = False
         '
         'lblId
@@ -135,34 +138,54 @@ Partial Class formPpal
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
-        'btnListar
+        'btnSearch
         '
-        Me.btnListar.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnListar.Location = New System.Drawing.Point(147, 270)
-        Me.btnListar.Name = "btnListar"
-        Me.btnListar.Size = New System.Drawing.Size(94, 33)
-        Me.btnListar.TabIndex = 12
-        Me.btnListar.Text = "Buscar"
-        Me.btnListar.UseVisualStyleBackColor = False
+        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnSearch.Location = New System.Drawing.Point(147, 270)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(94, 33)
+        Me.btnSearch.TabIndex = 12
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnNext
         '
-        Me.Button1.BackColor = System.Drawing.Color.Silver
-        Me.Button1.Location = New System.Drawing.Point(48, 309)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(193, 33)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Siguiente"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnNext.BackColor = System.Drawing.Color.Silver
+        Me.btnNext.Location = New System.Drawing.Point(48, 309)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(193, 33)
+        Me.btnNext.TabIndex = 13
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = False
+        '
+        'GrillaPersona
+        '
+        Me.GrillaPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.GrillaPersona.Location = New System.Drawing.Point(273, 29)
+        Me.GrillaPersona.Name = "GrillaPersona"
+        Me.GrillaPersona.Size = New System.Drawing.Size(506, 352)
+        Me.GrillaPersona.TabIndex = 14
+        '
+        'btnList
+        '
+        Me.btnList.BackColor = System.Drawing.Color.LightCyan
+        Me.btnList.Location = New System.Drawing.Point(48, 348)
+        Me.btnList.Name = "btnList"
+        Me.btnList.Size = New System.Drawing.Size(193, 33)
+        Me.btnList.TabIndex = 15
+        Me.btnList.Text = "List"
+        Me.btnList.UseVisualStyleBackColor = False
         '
         'formPpal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(301, 417)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnListar)
+        Me.ClientSize = New System.Drawing.Size(828, 437)
+        Me.Controls.Add(Me.btnList)
+        Me.Controls.Add(Me.GrillaPersona)
+        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.txtMail)
@@ -176,6 +199,7 @@ Partial Class formPpal
         Me.Controls.Add(Me.btnInsert)
         Me.Name = "formPpal"
         Me.Text = "Form1"
+        CType(Me.GrillaPersona, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -192,6 +216,8 @@ Partial Class formPpal
     Friend WithEvents lblMail As Label
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnListar As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents btnNext As Button
+    Friend WithEvents GrillaPersona As DataGridView
+    Friend WithEvents btnList As Button
 End Class

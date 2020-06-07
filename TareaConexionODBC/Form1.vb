@@ -57,7 +57,7 @@ Public Class formPpal
         MsgBox("Persona Delete correct")
     End Sub
 
-    Private Sub btnListar_Click(sender As Object, e As EventArgs) Handles btnListar.Click
+    Private Sub btnListar_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         Dim conexion As New OdbcConnection(stringDeConexion)
         conexion.Open()
         Dim comando As New OdbcCommand
@@ -69,13 +69,23 @@ Public Class formPpal
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         lector.Read()
 
         txtId.Text = lector(0).ToString()
         txtNombre.Text = lector(1).ToString()
         txtApellido.Text = lector(2).ToString()
         txtMail.Text = lector(3).ToString()
+    End Sub
+
+    Private Sub btnList_Click(sender As Object, e As EventArgs) Handles btnList.Click
+        Dim tabla As New DataTable
+
+        ' Cargar resultado de query en DataTable
+        tabla.Load(lector)
+
+        'Volcar la informacion de DataTable en el DataGrid
+        GrillaPersona.DataSource = tabla
     End Sub
 End Class
 
