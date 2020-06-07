@@ -91,6 +91,8 @@ Public Class formPpal
 
         'Volcar la informacion de DataTable en el DataGrid
         GrillaPersona.DataSource = tabla
+
+
     End Sub
 End Class
 
