@@ -28,7 +28,7 @@
     End Sub
 
     Public Sub Modificar()
-        Comando.CommandText = "UPDATE persona SET nombre = '" + Me.Nombre + "', apellido = '" + Me.Apellido + "', email = '" + Me.Mail + "' WHERE id = " + Me.Id
+        Comando.CommandText = "UPDATE persona SET nombre = '" + Me.Nombre + "', apellido = '" + Me.Apellido + "', mail = '" + Me.Mail + "' WHERE id = " + Me.Id
         Comando.ExecuteNonQuery()
 
     End Sub

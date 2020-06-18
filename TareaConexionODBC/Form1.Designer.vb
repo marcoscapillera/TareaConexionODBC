@@ -33,7 +33,6 @@ Partial Class formPpal
         Me.lblMail = New System.Windows.Forms.Label()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
         Me.btnCount = New System.Windows.Forms.Button()
         Me.GrillaPersona = New System.Windows.Forms.DataGridView()
         Me.btnList = New System.Windows.Forms.Button()
@@ -123,7 +122,7 @@ Partial Class formPpal
         Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnModificar.Location = New System.Drawing.Point(48, 270)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(93, 33)
+        Me.btnModificar.Size = New System.Drawing.Size(193, 33)
         Me.btnModificar.TabIndex = 10
         Me.btnModificar.Text = "Update"
         Me.btnModificar.UseVisualStyleBackColor = False
@@ -137,16 +136,6 @@ Partial Class formPpal
         Me.btnDelete.TabIndex = 11
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnSearch.Location = New System.Drawing.Point(147, 270)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(94, 33)
-        Me.btnSearch.TabIndex = 12
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'btnCount
         '
@@ -185,7 +174,6 @@ Partial Class formPpal
         Me.Controls.Add(Me.btnList)
         Me.Controls.Add(Me.GrillaPersona)
         Me.Controls.Add(Me.btnCount)
-        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.txtMail)
@@ -216,7 +204,6 @@ Partial Class formPpal
     Friend WithEvents lblMail As Label
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnSearch As Button
     Friend WithEvents btnCount As Button
     Friend WithEvents GrillaPersona As DataGridView
     Friend WithEvents btnList As Button
