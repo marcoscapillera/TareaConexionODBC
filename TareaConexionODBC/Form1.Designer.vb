@@ -34,7 +34,7 @@ Partial Class formPpal
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
-        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnCount = New System.Windows.Forms.Button()
         Me.GrillaPersona = New System.Windows.Forms.DataGridView()
         Me.btnList = New System.Windows.Forms.Button()
         CType(Me.GrillaPersona, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,15 +148,15 @@ Partial Class formPpal
         Me.btnSearch.Text = "Search"
         Me.btnSearch.UseVisualStyleBackColor = False
         '
-        'btnNext
+        'btnCount
         '
-        Me.btnNext.BackColor = System.Drawing.Color.Silver
-        Me.btnNext.Location = New System.Drawing.Point(48, 309)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(193, 33)
-        Me.btnNext.TabIndex = 13
-        Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = False
+        Me.btnCount.BackColor = System.Drawing.Color.Silver
+        Me.btnCount.Location = New System.Drawing.Point(48, 309)
+        Me.btnCount.Name = "btnCount"
+        Me.btnCount.Size = New System.Drawing.Size(193, 33)
+        Me.btnCount.TabIndex = 13
+        Me.btnCount.Text = "Count"
+        Me.btnCount.UseVisualStyleBackColor = False
         '
         'GrillaPersona
         '
@@ -184,7 +184,7 @@ Partial Class formPpal
         Me.ClientSize = New System.Drawing.Size(726, 401)
         Me.Controls.Add(Me.btnList)
         Me.Controls.Add(Me.GrillaPersona)
-        Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.btnCount)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnModificar)
@@ -217,7 +217,7 @@ Partial Class formPpal
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnSearch As Button
-    Friend WithEvents btnNext As Button
+    Friend WithEvents btnCount As Button
     Friend WithEvents GrillaPersona As DataGridView
     Friend WithEvents btnList As Button
 End Class
